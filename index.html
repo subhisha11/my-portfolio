@@ -1,0 +1,281 @@
+<html>
+<head>
+  <title>Subhisha | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', sans-serif; background: #f8fafc; color: #333; }
+
+    header {
+      background: linear-gradient(to right, #007acc, #005f99);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    header h1 { font-size: 3em; }
+    header p { font-size: 1.2em; }
+
+    nav {
+      background-color: #004d73;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 15px;
+    }
+    nav a, #theme-toggle {
+      color: white;
+      text-decoration: none;
+      padding: 10px 18px;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background 0.3s;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    nav a:hover, #theme-toggle:hover {
+      background-color: #007acc;
+    }
+
+    main { max-width: 1000px; margin: auto; padding: 40px 20px; }
+    section {
+      background: white;
+      padding: 30px;
+      margin-bottom: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.07);
+    }
+    section h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: #005f99;
+      border-bottom: 3px solid #00aaff;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .center { text-align: center; }
+    img {
+      max-width: 220px;
+      border-radius: 15px;
+      display: block;
+      margin: 0 auto 20px;
+      border: 4px solid #007acc;
+    }
+    ul { padding-left: 20px; line-height: 1.8; }
+    a { color: #007acc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    .project-card {
+      border: 1px solid #e0e0e0;
+      padding: 20px;
+      border-radius: 10px;
+      transition: box-shadow 0.3s;
+      background: #f9fcff;
+    }
+    .project-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin: auto;
+    }
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      padding: 12px;
+      background: #007acc;
+      color: white;
+      border: none;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #scrollTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      padding: 10px 15px;
+      background: #007acc;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    .dark-mode {
+      background-color: #111;
+      color: #eee;
+    }
+    .dark-mode section {
+      background-color: #1a1a1a;
+      border-color: #333;
+    }
+    .dark-mode nav {
+      background-color: #222;
+    }
+    .dark-mode nav a {
+      color: #eee;
+    }
+    .dark-mode a {
+      color: #66ccff;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2em; }
+      nav { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="home">
+    <h1>Subhisha Chintada</h1>
+    <p>B.Tech in CSE (AI & ML) | Web Developer | ANITS</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+    <button id="theme-toggle">🌙 Dark Mode</button>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <img src="me.jpg" alt="My Photo">
+      <p>Hello! I'm <strong>Subhisha</strong>, a passionate 3rd-year student of B.Tech CSE (AI & ML) at ANITS, Visakhapatnam.</p>
+      <p>I enjoy creating responsive websites, solving problems with code, and learning AI tools.</p>
+      <h3>Skills</h3>
+      <ul>
+        <li><strong>Languages:</strong> Java, Python, C</li>
+        <li><strong>Web:</strong> HTML, CSS, JavaScript</li>
+        <li><strong>AI:</strong> NumPy, Pandas, scikit-learn</li>
+        <li><strong>DB:</strong> MySQL, SQLite</li>
+        <li><strong>Tools:</strong> Git, VS Code, Jupyter</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>💰 Budget Tracker</h3>
+          <p>Track expenses with local storage and chart summary.</p>
+          <a href=" https://subhisha11.github.io/budget_trackerapp/">GitHub Link</a>
+        </div>
+        <div class="project-card">
+          <h3>📝 Task Manager</h3>
+          <p>Simple productivity tool to manage daily tasks.</p>
+          <a href=" https://subhisha11.github.io/task-manager-appl/">GitHub Link</a>
+        </div>
+        <div class="project-card">
+          <h3>👩‍🏫 Student Collaboration Hub</h3>
+          <p>Community platform hosted on Render to collaborate and share.</p>
+          <a href="https://student-colaboration-hub1.onrender.com">Visit Site</a>
+        </div>
+        <div class="project-card">
+          <h3>🔳 QR Code Generator</h3>
+          <p>Generate and download custom QR codes with links/text.</p>
+          <a href=" https://subhisha11.github.io/QR-and--CLI-_Notes-Python-Apps/">GitHub Link</a>
+        </div>
+        <div class="project-card">
+          <h3>💻 CLI App</h3>
+          <p>Command-line utility app for basic file management tasks.</p>
+          <a href=" https://subhisha11.github.io/QR-and--CLI-_Notes-Python-Apps/">GitHub Link</a>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="resume">
+      <h2>Resume</h2>
+      <p class="center"><a href="https://1drv.ms/b/c/24ef926a97e74f7e/EWM438VYqkNMnMYLMWoqjUUBKgi2RxSDoN3loC18QS36zQ?e=969Shh"download>📥 Download Resume</a></p>
+          </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="center" style="margin-top: 20px;">
+        <p><strong>Email:</strong> subhisha@example.com</p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/subhisha11">github.com/subhisha11</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/subhishachintada">linkedin.com/in/subhishachintada</a></p>
+      </div>
+    </section>
+  </main>
+
+  <button id="scrollTopBtn">↑</button>
+
+  <footer>
+    &copy; 2025 Subhisha Chintada | Built with 💙 using HTML, CSS & JS
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById("theme-toggle");
+    const body = document.body;
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      toggleBtn.textContent = body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 Dark Mode";
+    });
+
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = () => {
+      scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    };
+    scrollBtn.onclick = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+      const name = this.name.value.trim();
+      const email = this.email.value.trim();
+      const message = this.message.value.trim();
+      if (!name || !email || !message) {
+        alert("Please fill out all fields.");
+        e.preventDefault();
+      } else {
+        alert("Thank you, " + name + "! Your message has been sent.");
+      }
+    });
+  </script>
+
+</body>
+</html>
